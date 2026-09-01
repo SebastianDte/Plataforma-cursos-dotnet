@@ -1,0 +1,354 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB90F32F-BBBD-421B-A037-35FA5BFD1377}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vistas</RootNamespace>
+    <AssemblyName>Vistas</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44335</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Administrador\AdminPanel.aspx" />
+    <Content Include="Administrador\Curso\CursoForm.aspx" />
+    <Content Include="Administrador\Curso\CursoPanel.aspx" />
+    <Content Include="Administrador\Curso\LeccionPanel.aspx" />
+    <Content Include="Administrador\Curso\ModuloGestion.aspx" />
+    <Content Include="Administrador\GestionEntregas.aspx" />
+    <Content Include="Administrador\PagosPanel.aspx" />
+    <Content Include="Administrador\PerfilAdministrador.aspx" />
+    <Content Include="Alumno\Aula\CSS\StyleSheet1.css" />
+    <Content Include="Alumno\Certificados.aspx" />
+    <Content Include="Alumno\PerfilAlumno.aspx" />
+    <Content Include="Assets\css\admin-style.css" />
+    <Content Include="Assets\css\Home.css" />
+    <Content Include="Assets\css\styles.css" />
+    <Content Include="Assets\Cursos\placeholder-curso.jpg" />
+    <Content Include="Assets\js\admin.js" />
+    <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\js\pago-script.js" />
+    <Content Include="Assets\js\perfilAlumno.js" />
+    <Content Include="Assets\js\togglePassword.js" />
+    <Content Include="Alumno\Aula\Aula.aspx" />
+    <Content Include="Auth\ActivarCuenta.aspx" />
+    <Content Include="Auth\RecuperarContraseña.aspx" />
+    <Content Include="Auth\RestablecerContraseña.aspx" />
+    <Content Include="Administrador\CategoriaGestion.aspx" />
+    <Content Include="CursoDetalle.aspx" />
+    <Content Include="EmailTemplates\ActivacionCuenta.html" />
+    <Content Include="EmailTemplates\RestablecerContraseña.html" />
+    <Content Include="EmailTemplates\VerificarNuevoEmail.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="Auth\Loguin.aspx" />
+    <Content Include="Alumno\MisCursos.aspx" />
+    <Content Include="Auth\Registro.aspx" />
+    <Content Include="Alumno\MisPagos.aspx" />
+    <Content Include="Transaccion\ProcesoPago.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador.Master.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador.Master.designer.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Curso\LeccionPanel.aspx.cs">
+      <DependentUpon>LeccionPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Curso\LeccionPanel.aspx.designer.cs">
+      <DependentUpon>LeccionPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GestionEntregas.aspx.cs">
+      <DependentUpon>GestionEntregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GestionEntregas.aspx.designer.cs">
+      <DependentUpon>GestionEntregas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\PerfilAdministrador.aspx.cs">
+      <DependentUpon>PerfilAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\PerfilAdministrador.aspx.designer.cs">
+      <DependentUpon>PerfilAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Alumno.Master.cs">
+      <DependentUpon>Alumno.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Alumno.Master.designer.cs">
+      <DependentUpon>Alumno.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Aula\Aula.aspx.cs">
+      <DependentUpon>Aula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Aula\Aula.aspx.designer.cs">
+      <DependentUpon>Aula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Curso\CursoForm.aspx.cs">
+      <DependentUpon>CursoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Curso\CursoForm.aspx.designer.cs">
+      <DependentUpon>CursoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Curso\CursoPanel.aspx.cs">
+      <DependentUpon>CursoPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Curso\CursoPanel.aspx.designer.cs">
+      <DependentUpon>CursoPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Curso\ModuloGestion.aspx.cs">
+      <DependentUpon>ModuloGestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Curso\ModuloGestion.aspx.designer.cs">
+      <DependentUpon>ModuloGestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\PagosPanel.aspx.cs">
+      <DependentUpon>PagosPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\PagosPanel.aspx.designer.cs">
+      <DependentUpon>PagosPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Certificados.aspx.cs">
+      <DependentUpon>Certificados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Certificados.aspx.designer.cs">
+      <DependentUpon>Certificados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\PerfilAlumno.aspx.cs">
+      <DependentUpon>PerfilAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\PerfilAlumno.aspx.designer.cs">
+      <DependentUpon>PerfilAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Aula\Aula.Master.cs">
+      <DependentUpon>Aula.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Aula\Aula.Master.designer.cs">
+      <DependentUpon>Aula.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\ActivarCuenta.aspx.cs">
+      <DependentUpon>ActivarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\ActivarCuenta.aspx.designer.cs">
+      <DependentUpon>ActivarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\RecuperarContraseña.aspx.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\RecuperarContraseña.aspx.designer.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\RestablecerContraseña.aspx.cs">
+      <DependentUpon>RestablecerContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\RestablecerContraseña.aspx.designer.cs">
+      <DependentUpon>RestablecerContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CategoriaGestion.aspx.cs">
+      <DependentUpon>CategoriaGestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\CategoriaGestion.aspx.designer.cs">
+      <DependentUpon>CategoriaGestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CursoDetalle.aspx.cs">
+      <DependentUpon>CursoDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CursoDetalle.aspx.designer.cs">
+      <DependentUpon>CursoDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\Loguin.aspx.cs">
+      <DependentUpon>Loguin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\Loguin.aspx.designer.cs">
+      <DependentUpon>Loguin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\MisCursos.aspx.cs">
+      <DependentUpon>MisCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\MisCursos.aspx.designer.cs">
+      <DependentUpon>MisCursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\MisPagos.aspx.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\MisPagos.aspx.designer.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transaccion\ProcesoPago.aspx.cs">
+      <DependentUpon>ProcesoPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transaccion\ProcesoPago.aspx.designer.cs">
+      <DependentUpon>ProcesoPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Auth\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Alumno\Alumno.Master" />
+    <Content Include="Administrador.Master" />
+    <Content Include="Alumno\Web.config" />
+    <Content Include="Administrador\Web.config" />
+    <Content Include="Auth\Web.config" />
+    <Content Include="Site1.Master" />
+    <None Include=".editorconfig" />
+    <Content Include="Alumno\Aula\Aula.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\Avatares\" />
+    <Folder Include="Assets\Certificado\" />
+    <Folder Include="Assets\Comprobantes\" />
+    <Folder Include="Assets\img\" />
+    <Folder Include="Assets\Material\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{328dde5c-5452-4a98-b6e7-824bee148125}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{79a89dd4-de16-4426-adce-6b950070a789}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57613</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44335/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
