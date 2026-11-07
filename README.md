@@ -173,8 +173,8 @@ Verifica en `Vistas/Web.config` que la cadena de conexión apunte a tu servidor 
 Desarrollado con dedicación por:
 
 * **Sebastián Duarte** — *Fullstack .NET Developer*  
-  * [GitHub](https://github.com/SebasDuarte)  
-  * [LinkedIn](https://www.linkedin.com/in/sebastianduarte) *(¡conectemos!)*
+  * [GitHub](https://github.com/SebastianDte)  
+  * [LinkedIn](https://www.linkedin.com/in/sebastiandte) *(¡conectemos!)*
 
 ---
 
