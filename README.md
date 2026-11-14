@@ -126,7 +126,7 @@ graph TD
 
 ### Paso 1: Clonar el Repositorio
 ```bash
-git clone https://github.com/SebasDuarte/Plataforma-cursos-dotnet.git
+git clone https://github.com/SebastianDte/Plataforma-cursos-dotnet.git
 cd Plataforma-cursos-dotnet
 ```
 
