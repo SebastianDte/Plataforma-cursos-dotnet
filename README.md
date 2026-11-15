@@ -200,7 +200,7 @@ cd Plataforma-cursos-dotnet
           providerName="System.Data.SqlClient" />
    </connectionStrings>
    ```
-2. Abrí la solución [`TPC-PlataformaCursos-Equipo9B.sln`](./TPC-PlataformaCursos-Equipo9B.sln) en Visual Studio 2022 y presioná **`F5`** (IIS Express).
+2. Abrí la solución [`DevCoreAcademy.sln`](./DevCoreAcademy.sln) en Visual Studio 2022 y presioná **`F5`** (IIS Express).
 
 ### 🔑 Credenciales de Prueba Preconfiguradas
 
